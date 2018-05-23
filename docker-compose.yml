@@ -3,7 +3,7 @@ services:
   home-root:
     build: .
     ports:
-      - 8083:8080
+      - 8080:8080
     volumes:
       - ../mounts/home/home1/:/html
     depends_on:
@@ -12,6 +12,6 @@ services:
   do:
     build: ./do
     ports:
-      - 8084:8080
+      - 8090:8080
     volumes:
       - ../mounts/do:/html

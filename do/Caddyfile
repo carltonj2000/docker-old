@@ -1,1 +1,8 @@
-*:8080 
+*:8080 {
+  proxy /weddinginvite tinaandcarlton2weddinginvite:5000 {
+    without /weddinginvite
+  }
+  proxy /wedding tinaandcarlton3wedding:5000 {
+    without /wedding
+  }
+}

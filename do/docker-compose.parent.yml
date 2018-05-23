@@ -1,0 +1,11 @@
+version: '3'
+services:
+  do:
+    build: ./do
+    ports:
+      - "8090:8080"
+    volumes:
+      - ../mounts/do:/html
+    depends_on:
+      - tinaandcarlton2weddinginvite
+      - tinaandcarlton3wedding

@@ -1,8 +1,6 @@
 FROM ubuntu:16.04
 
-RUN apt update
-RUN apt upgrade -y
-
+RUN apt update && apt upgrade -y
 EXPOSE 8080
 
 COPY caddy /usr/bin/caddy

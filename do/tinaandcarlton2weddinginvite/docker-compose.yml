@@ -1,0 +1,8 @@
+version: '3'
+services:
+  tinaandcarlton3wedding:
+    build: .
+    ports:
+      - "8080:5000"
+    volumes:
+      - ../../../mounts/do/tinaandcarlton2weddinginvite:/usr/src/app

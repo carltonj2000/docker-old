@@ -31,24 +31,28 @@ The `./web/tools` directory:
 * Contains tools that are not in a repository and are rsync'ed to the `mounts`
   and the `docker` directory.
 * The `docker` directory contains _HARD_ links to the caddy web server stored
-  in the tools directory.
+  in the `tools` directory.
+* Run `yarn link-caddy` in the `scripts` directory to setup the caddy links.
 
-The `./web/docker` and `./web/mounts` separate because:
+The `./web/docker` and `./web/mounts` are separate because:
 
 * Digital Ocean had an issues auto restarting docker containers on reboot from
   a mounted drive.
-* The DO issue is resolved when the docker files is on the booting host.
+* The DO issue is resolved by having the docker files on the booting host file
+  system.
 * A mounted file system was used on DO so that switching droplets would involve
-  less work (clone the `./web/docker` repository and mount a drive containing
-  `./web/mounts`).
+  less work (clone the `./web/docker` repository, mount a drive containing
+  `./web/mounts` and run the utilities in `./web/tools/` to setup the
+  environment).
 
 The docker file can point to `home1` while new code is developed in `home2` and
 when development is done in `home2` the docker file can point to the new home.
 
-In the `./web/docker/home` use the following command to start up a home server.
+In `./web/docker` execute the following commands to start the home server.
 
 ```
-docker-compose -f docker-compose.yml -f home/docker-compose.parent.yml up
+make build
+make up
 ```
 
 The home setup has the home web sites and the digital ocean web site.
