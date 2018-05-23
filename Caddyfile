@@ -1,0 +1,8 @@
+*:8080 {
+  proxy /home home:8080 {
+    without /home
+  }
+  proxy /do do:8080 {
+    without /do
+  }
+}

@@ -1,0 +1,5 @@
+*:8080 {
+  proxy /api api-server:8080 {
+    without /api
+  }
+}

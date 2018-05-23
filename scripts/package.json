@@ -1,0 +1,10 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "link-caddy": "node link-caddy.js",
+    "link-caddy-db": "node --inspect-brk link-caddy.js"
+  }
+}

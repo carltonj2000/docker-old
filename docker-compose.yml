@@ -1,0 +1,17 @@
+version: '3'
+services:
+  home-root:
+    build: .
+    ports:
+      - 8083:8080
+    volumes:
+      - ../mounts/home/home1/:/html
+    depends_on:
+      - home
+      - do
+  do:
+    build: ./do
+    ports:
+      - 8084:8080
+    volumes:
+      - ../mounts/do:/html
