@@ -1,9 +1,9 @@
-dcHome = -f ./docker-compose.home.yml
+dcHome = -f ./docker-compose.yml
 dcDo = -f ./do/docker-compose.parent.yml
 
-home-up:
+up:
 	docker-compose $(dcHome) up
-home-build:
+build:
 	docker-compose $(dcHome) build
 
-home-bup: home-build home-up
+bup: build up

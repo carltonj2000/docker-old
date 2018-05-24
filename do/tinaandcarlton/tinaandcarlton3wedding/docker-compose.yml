@@ -5,4 +5,4 @@ services:
     ports:
       - "8080:5000"
     volumes:
-      - ../../../mounts/do/tinaandcarlton3wedding:/usr/src/app
+      - ../../../../mounts/do/tinaandcarlton/tinaandcarlton3wedding:/usr/src/app

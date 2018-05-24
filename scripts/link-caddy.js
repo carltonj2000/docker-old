@@ -4,7 +4,7 @@ const { execSync } = require("child_process");
 
 const img = "caddy";
 const src = `../../tools/${img}`;
-const dstds = ["../", "../home", "../do"];
+const dstds = ["../", "../home", "../do", "../do/tinaandcarlton"];
 
 if (!fs.existsSync(src)) {
   console.log(`Can not find caddy at ${src}`);

@@ -5,7 +5,7 @@ services:
     ports:
       - "8090:8080"
     volumes:
-      - ../mounts/do:/html
+      - ../../mounts/do:/html
     depends_on:
       - tinaandcarlton2weddinginvite
       - tinaandcarlton3wedding

@@ -3,7 +3,7 @@ services:
   home:
     build: .
     ports:
-      - "8081:8080"
+      - "8080:8080"
     volumes:
       - ../../mounts/home/home1/home-server/build:/html
     depends_on:
